@@ -46,8 +46,13 @@ form.addEventListener("submit", (e) => {
     e.preventDefault(); //prevents the page from reloading
     addBookToLibrary();
     render();
+    clearForm();
 });
 
+function clearForm(){
+  name.value = "";
+  author.value = "";
+}
 
 function addBookToLibrary(){
   if(name.value.length === 0 || author.value.length === 0){
